@@ -57,6 +57,11 @@ A clean, responsive web app to help users manage their daily tasks efficiently. 
 
 ## 📸 Screenshots
 
+![Login Page](./screenshots/Screenshot (73).png)
+
+![Task1](./screenshots/Screenhot (74).png)
+
+![Task1](./screenshots/Screenhot (75).png)
 
 
 ---
