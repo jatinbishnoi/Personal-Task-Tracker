@@ -57,11 +57,14 @@ A clean, responsive web app to help users manage their daily tasks efficiently. 
 
 ## 📸 Screenshots
 
-![Login Page](./screenshots/Screenshot (73).png)
+### 🔐 Login Page
+![Login Page](./screenshots/login.png)
 
-![Task1](./screenshots/Screenhot (74).png)
+### ✅ Task Management - 1
+![Task 1](./screenshots/task1.png)
 
-![Task1](./screenshots/Screenhot (75).png)
+### ✅ Task Management - 2
+![Task 2](./screenshots/task2.png)
 
 
 ---
