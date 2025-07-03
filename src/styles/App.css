@@ -1,0 +1,460 @@
+/* ========== General Styles ========== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: fadeInFull 0.6s ease-in-out;
+}
+
+/* ========== Login ========== */
+.login-container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.login-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.login-container input:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #5a67d8;
+}
+
+/* ========== Dashboard ========== */
+.dashboard {
+  background: white;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 40px;
+  width: 100%;
+  animation: slideFade 0.6s ease;
+}
+
+.dashboard h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #333;
+}
+
+.profile-img {
+  margin-top: 15px;
+  max-width: 120px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logout button */
+.logout-btn {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 15px;
+}
+
+.logout-btn:hover {
+  background-color: #c53030;
+  transform: scale(1.05);
+}
+
+/* ========== Task Form ========== */
+.task-form {
+  text-align: left;
+  margin-top: 30px;
+  animation: fadeInSlide 0.6s ease-in-out;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.task-form button {
+  padding: 10px 20px;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-form button:hover {
+  background-color: #5a67d8;
+  transform: translateY(-2px);
+}
+
+/* ========== Task Item/List ========== */
+.task-list {
+  margin-top: 30px;
+  text-align: left;
+  animation: fadeIn 0.6s ease;
+}
+
+.task-item {
+  background: #f7f9fc;
+  padding: 16px;
+  border-radius: 10px;
+  border-left: 5px solid #667eea;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  animation: fadeInSlide 0.5s ease;
+  transition: all 0.3s ease-in-out;
+}
+
+.task-item.completed {
+  opacity: 0.6;
+  border-left-color: green;
+  text-decoration: line-through;
+}
+
+.task-item h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.task-item p {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+.task-item small {
+  display: block;
+  color: #666;
+  font-size: 12px;
+}
+
+.task-actions {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.task-actions button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.task-actions button:hover {
+  transform: scale(1.05);
+}
+
+.task-actions button:nth-child(1) {
+  background: #38a169;
+  color: white;
+}
+.task-actions button:nth-child(2) {
+  background: #3182ce;
+  color: white;
+}
+.task-actions button:nth-child(3) {
+  background: #e53e3e;
+  color: white;
+}
+
+/* ========== Animations ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInFull {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ========== Responsive ========== */
+@media screen and (max-width: 480px) {
+  body {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .App {
+    padding: 12px;
+  }
+
+  .login-container,
+  .dashboard {
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+
+  .dashboard h2 {
+    font-size: 20px;
+  }
+
+  .profile-img {
+    max-width: 80px;
+  }
+
+  .task-form input,
+  .task-form textarea,
+  .task-form select,
+  .search-bar input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .task-form button,
+  .logout-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .task-actions {
+    flex-direction: column;
+  }
+
+  .task-actions button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .task-item {
+    padding: 12px;
+  }
+
+  .task-item h3 {
+    font-size: 16px;
+  }
+
+  .task-item p,
+  .task-item small {
+    font-size: 13px;
+  }
+
+  .task-filter {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .filter-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+}
+
+/* ========== Utility Labels ========== */
+.status-badge {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 4px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background-color: #eee;
+}
+
+.status-badge.done {
+  background-color: #38a169;
+  color: white;
+}
+
+.status-badge.pending {
+  background-color: #f6ad55;
+  color: white;
+}
+
+.task-item.pending {
+  border-left-color: #f6ad55;
+}
+
+.task-item.completed {
+  border-left-color: #38a169;
+  text-decoration: line-through;
+  opacity: 0.75;
+}
+
+.task-filter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #e2e8f0;
+  transition: 0.3s;
+}
+
+.filter-btn.active {
+  background: #667eea;
+  color: white;
+  font-weight: bold;
+}
+
+.filter-btn:hover {
+  background: #a3bffa;
+}
+
+.search-bar {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.priority-label {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.priority-label.high {
+  background-color: #e53e3e;
+}
+
+.priority-label.medium {
+  background-color: #ed8936;
+}
+
+.priority-label.low {
+  background-color: #38a169;
+}
+
+.tag-label {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fcd34d;
+}
